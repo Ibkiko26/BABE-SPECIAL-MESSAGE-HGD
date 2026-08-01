@@ -71,3 +71,24 @@ body {
 /* Ensure content sits above animated hearts */
 .message-card * { position: relative; z-index: 1; }
 
+/* Marquee rows: slow alternating horizontal scrolls */
+.marquee { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
+.marquee .row { overflow: hidden; padding: 6px 0; }
+.track { display: flex; gap: 18px; align-items: center; width: max-content; }
+.track .photo-frame { flex: 0 0 220px; }
+.track-left { animation: scroll-left var(--dur, 60s) linear infinite; }
+.track-right { animation: scroll-right var(--dur, 62s) linear infinite; }
+.track:hover { animation-play-state: paused; }
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0%); }
+}
+
+@media (max-width: 900px) { .track .photo-frame { flex: 0 0 180px; } }
+@media (max-width: 640px) { .track .photo-frame { flex: 0 0 150px; } }
+

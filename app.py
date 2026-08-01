@@ -20,13 +20,26 @@ def discover_images():
 
 
 def build_html(images):
-    # Build a gallery matching the screenshot layout
-    cards = []
-    for img in images:
-        cards.append(f'<div class="photo-frame"><img src="{img}" alt="Maureen"></div>')
-    gallery = '\n'.join(cards)
+  # Build a 4-row marquee gallery. Each row scrolls in alternating directions.
+  def make_row(imgs, row_index):
+    if not imgs:
+      imgs = images
+    cards = ''.join(f'<div class="photo-frame"><img src="{img}" alt="Maureen"></div>' for img in imgs)
+    # duplicate for seamless scroll
+    track = cards + cards
+    direction = 'track-left' if row_index % 2 == 0 else 'track-right'
+    duration = 60 + (row_index * 8)  # slight variation per row
+    return f'<div class="row"><div class="track {direction}" style="--dur:{duration}s">{track}</div></div>'
 
-    return f'''<!doctype html>
+  # distribute images across 4 rows round-robin
+  rows = []
+  for r in range(4):
+    row_imgs = images[r::4]
+    rows.append(make_row(row_imgs, r))
+
+  marquee = '\n'.join(rows)
+
+  return f'''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -47,8 +60,8 @@ def build_html(images):
       </div>
     </header>
 
-    <section class="gallery">
-      {gallery}
+    <section class="marquee">
+      {marquee}
     </section>
 
     <section class="message-card">
