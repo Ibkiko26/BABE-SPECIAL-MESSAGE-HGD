@@ -61,7 +61,7 @@ def build_html(images):
       <p>Keep shining, keep grinding, and know that I am always cheering you on.</p>
 
       <p class="with-love">With all my love,</p>
-      <p class="signature">Your Boyfriend, Ibrahim Koros</p>
+      <p class="signature">Your Loving Boyfriend♥️, Ibrahim Koros</p>
     </section>
   </div>
 </body>
