@@ -37,19 +37,19 @@ def build_html(images):
     <main class="container">
       <section class="hero-card">
         <p class="eyebrow">A sweet message for my lovely girl</p>
-        <h1>Happy Girlfriends Day, Maureen Mbete Musau</h1>
+        <h1>Happy Girlfriends Day, My love 💖💗</h1>
         <p class="message">
-          My beautiful Maureen, I just want to remind you how much I admire your grace,
+          My beautiful love, I just want to remind you how much I admire your grace,
           strength, and beautiful heart. May this day bring you endless joy, good health,
           and a beautiful flow of financial breakthrough. Your hard work and dedication have
           been inspiring, especially as you completed your Diploma in Health Records final exams.
-          I am proud of your perseverance and the way you keep pushing forward.
+          I am proud of your perseverance and the way you keep pushing forward. 💕
         </p>
         <p class="message">
           As you step into the corporate world, I wish you the very best, all the luck in the world,
-          and a future filled with success, peace, and happiness. Keep shining, my love.
+          and a future filled with success, peace, and happiness. Keep shining, my love. 💘✨
         </p>
-        <p class="signature">With love and admiration, Ibrahim Koros</p>
+        <p class="signature">With love and admiration, Ibrahim Koros 💕</p>
       </section>
 
       <section class="gallery-card">
