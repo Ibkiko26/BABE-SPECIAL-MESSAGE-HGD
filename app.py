@@ -69,12 +69,12 @@ def build_html(images):
         <span>💗</span><span>💖</span><span>💘</span><span>💝</span>
       </div>
       <p class="intro">To my amazing love,</p>
-      <p>On this Girlfriend's Day, I just wanted to take a moment to celebrate you. I wish you nothing but endless happiness, radiant good health, and massive financial breakthroughs in everything you do.</p>
-      <p>I am so incredibly proud of your hard work. It takes immense courage and dedication to step completely out of your comfort zone and move to a whole new continent. You did that to change your life and uplift your family, and watching you push forward is truly inspiring.</p>
-      <p>Keep shining, keep grinding, and know that I am always cheering you on.</p>
+      <p>On this Girlfriend's Day I celebrate you — your heart, your courage, and the beautiful future you are building. I wish you boundless happiness, unshakable good health, and a real financial breakthrough that opens new doors and brings peace of mind.</p>
+      <p>I want to specially commend your hard work and determination in completing your Diploma in Health Records final exams. That milestone is the result of late nights, focus, and steady perseverance — I am so proud of how far you've come.</p>
+      <p>As you step into the corporate world, I wish you every success and smooth transitions. May you find opportunities that match your talent, mentors who champion you, and the confidence to thrive. Good luck — I know you will shine.</p>
 
-      <p class="with-love">With all my love,</p>
-      <p class="signature">Your Loving Boyfriend♥️, Ibrahim Koros</p>
+      <p class="with-love">With all my love and pride,</p>
+      <p class="signature">Ibrahim Koros — Your Boyfriend</p>
     </section>
   </div>
 </body>
