@@ -58,6 +58,9 @@ def build_html(images):
           <p>Every picture carries a smile, and every smile reminds me of your lovely spirit.</p>
         </div>
         <div class="gallery-shell">
+          <div class="heart-splash heart-splash-a">💗</div>
+          <div class="heart-splash heart-splash-b">💖</div>
+          <div class="heart-splash heart-splash-c">💘</div>
           <div class="gallery-track">
             {gallery}
           </div>
