@@ -1,75 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Happy Girlfriend's Day</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriend's Day, Maureen!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #c88ea7;
+            --secondary: #99627a;
+            --text-dark: #4a3b42;
+            --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #f3e6e8 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Animated floating background */
+        .ambient-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, rgba(200, 142, 167, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
+            animation: pulse 6s infinite alternate;
+        }
+
+        .container {
+            max-width: 950px;
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .photo-frame {
+            width: 260px;
+            height: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(153, 98, 122, 0.15);
+            border: 6px solid #ffffff;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .photo-frame:nth-child(1) { animation-delay: 0.3s; }
+        .photo-frame:nth-child(2) { animation-delay: 0.6s; }
+        .photo-frame:nth-child(3) { animation-delay: 0.9s; }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .photo-frame:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Message Card */
+        .message-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            line-height: 1.8;
+            font-size: 1.15rem;
+            border: 1px solid rgba(200, 142, 167, 0.3);
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .message-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .message-card p {
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-top: 30px;
+            text-align: right;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            from { opacity: 0.6; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1.05); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .photo-frame { width: 100%; max-width: 320px; height: 350px; }
+            .message-card { padding: 30px; font-size: 1.05rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="page">
-    <header class="hero">
-      <h1>Happy Girlfriend's Day, My love! <span class="title-emoji">💖</span></h1>
-      <div class="sparkles">
-        <span class="spark">✨</span>
-        <span class="spark">✨</span>
-        <span class="spark">✨</span>
-        <span class="spark">✨</span>
-      </div>
-    </header>
+    <div class="ambient-background"></div>
+    
+    <div class="container">
+        <h1>Happy Girlfriend's Day, Maureen! ✨</h1>
+        
+        <div class="gallery">
+            <div class="photo-frame"><img src="maureen1.jpg" alt="Beautiful Maureen"></div>
+            <div class="photo-frame"><img src="maureen2.jpg" alt="Beautiful Maureen"></div>
+            <div class="photo-frame"><img src="maureen3.jpg" alt="Beautiful Maureen"></div>
+        </div>
 
-    <section class="gallery">
-      <div class="photo-frame"><img src="img1.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img10.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img11.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img12.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img13.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img14.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img15.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img16.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img17.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img18.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img19.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img2.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img20.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img21.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img22.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img23.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img24.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img25.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img26.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img27.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img28.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img29.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img3.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img30.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img31.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img32.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img33.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img34.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img35.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img36.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img4.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img5.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img6.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img7.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img8.jpg" alt="Maureen"></div>
-<div class="photo-frame"><img src="img9.jpg" alt="Maureen"></div>
-    </section>
-
-    <section class="message-card">
-      <div class="message-hearts" aria-hidden="true">
-        <span>💗</span><span>💖</span><span>💘</span><span>💝</span>
-      </div>
-      <p class="intro">To my amazing love,</p>
-      <p>On this Girlfriend's Day, I just wanted to take a moment to celebrate you. I wish you nothing but endless happiness, radiant good health, and massive financial breakthroughs in everything you do.</p>
-      <p>I am so incredibly proud of your hard work. It takes immense courage and dedication to step completely out of your comfort zone and move to a whole new continent. You did that to change your life and uplift your family, and watching you push forward is truly inspiring.</p>
-      <p>Keep shining, keep grinding, and know that I am always cheering you on.</p>
-
-      <p class="with-love">With all my love,</p>
-      <p class="signature">Your Boyfriend, Ibrahim Koros</p>
-    </section>
-  </div>
+        <div class="message-card">
+            <p>To my incredible Maureen Mbete Musau,</p>
+            <p>Happy Girlfriend's Day! Today is all about celebrating you. I want to wish you endless happiness, radiant good health, and an abundance of financial breakthroughs in everything you set your mind to.</p>
+            <p>I am beyond proud to commend your hard work and absolute dedication. Watching you successfully complete your final exams for your <span class="highlight">Diploma in Health Records</span> has been incredibly inspiring. You earned this victory.</p>
+            <p>As you step into the corporate world, I want to wish you the best of luck. You are brilliantly capable, and I know you are going to achieve amazing things. I'll be right here cheering for you every step of the way.</p>
+            
+            <div class="signature">
+                With all my love,<br>
+                Your Boyfriend, Ibrahim Koros
+            </div>
+        </div>
+    </div>
 </body>
 </html>
